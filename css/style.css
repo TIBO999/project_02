@@ -66,12 +66,47 @@ body {
   max-width: 84%;
   height: 100vh;
   display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.container-secondary_inner {
+  max-width: 64%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.container-secondary_inner h2 {
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 60px 0 0 0;
+}
+.title_paragraph {
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 21px;
+}
+.container-secondary {
+  width: 64%;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
+
+
+
+
+
 .carusel {
   background-color: rgba(17, 13, 9, 0.644);
   position: relative;
@@ -106,7 +141,7 @@ body {
   /* size: 60px; */
 }  
 .logo-txt {
-  font-family: raleway;
+  font-family: raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 22px;
   text-align: right;
@@ -115,9 +150,9 @@ body {
   color: #998675;
 }  
 .nav-item {
-  font-family: montserrat;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 8.5px;
+  font-size: 12px;
   color: white;
   text-decoration: none;
 }
@@ -299,7 +334,7 @@ body {
   color: #fff;
   -ms-word-break: break-all;
   word-break: break-all;
-  font-family: raleway;
+  font-family: raleway, Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 11px;
 }  
@@ -310,27 +345,27 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 40%;
+  width: 35%;
   min-height: 200px;
   color: #fff;
 }
 .carusel-txt p {
-  font-family: montserrat;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 16px;
   width: 85%;
   margin: 0 0 30px 0;
 }
 .carusel-txt h2 {
-  font-family: raleway;
+  font-family: raleway, Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 42px;
   line-height: 50px;
   margin: 0;
 } 
 .carusel-txt h3 {
-  font-family: raleway;
+  font-family: raleway, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 28px;
   line-height: 32px;
@@ -367,16 +402,184 @@ body {
   display: flex;
   justify-content: center;
   list-style-type: none;
+  padding: 0;
 }
 .content {
-  border: 1px solid rgb(11, 155, 76);
+  /* border: 1px solid rgb(11, 155, 76); */
   width: 100%;
 }
-/* .article {
-  width: 200px;
-  border: 1px solid black;
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  padding: 10px 10px 0 10px;
+  box-sizing: border-box;
+}
+.features:after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: rgb(85, 85, 85);
+}
+.features:hover .features-icon {
+  fill: rgb(199, 178, 153);
+}
+.features:hover .features-title {
+  color: rgb(199, 178, 153);
+}
+.features:hover:after {
+  background-color: rgb(199, 178, 153);
+}
+.features-icon {
+  display: block;
+  fill: rgb(85, 85, 85);
+  margin: 0 0 20px 0;
+}
+.features-title {
+  width: 100%;
+  margin: 0 0 5px 0;
+  text-align: center;
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgb(85, 85, 85);
+}
+.features-txt {
+  text-align: center;
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 5px 0 22px 0;
+}
+.realization {
+  background-color: rgb(251, 250, 248);
+  display: flex;
+  justify-content: center;
+}
+.realization-multi_photo {
+  width: 100%;
+  min-height: 480px;
+  background-image: url('../img/realization_center.jpg'),
+                    url('../img/realization_left.jpg'),
+                    url('../img/realization_right.jpg');
+  background-size: 62%, 63%, 63%;
+  background-repeat: no-repeat;
+  background-position: bottom center, bottom left, bottom right;
+}
+
+.wordpress {
+  background-image: -moz-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+}
+.ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 150px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ad-wrapper {
+  width: 531px;
+  margin: 0 470px 0 0;
+  /* Вместо использования margin-left: 470px, можно обернуть в div элементы ad-wrapper и ad-button, задать тегу div ширину и центровку. 
+  При таком подходе у блока .ad можно будет убрать justify-content: center; align-items: center; width: 100%; */
+}
+
+.ad-title {
+  width: 100%;
+  margin: 0;
+  font-size: 28px;
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  color: #fff;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.ad-title span {
+  color: rgb(199, 178, 153);
+}
+
+.ad-txt {
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  color: rgb(97, 88, 85);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.ad-button {
+  width: 170px;
+  min-height: 50px;
+  border: none;
+  border-bottom: 2px solid #736357;
+  border-radius: 3px;
+  background-color: #998675;
+  box-shadow: inset 0px 3px 0px 0px rgba(115, 99, 87, 0.004);
+}
+.ad-button-txt {
+  font-size: 14px;
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.643;
+  text-align: center;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.categories-btn-link {
+  width: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  border: none;
+  border-bottom: 3px solid #736357;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #998675;
+  color: #fff;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  margin: 35px 10px;
+}
+.categories-btn-link-txt {
+  margin: auto;
+}
+
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.article {
+  width: 370px;
+  height: 340px;
   position: relative;
+  margin-bottom: 25px;
+  background-color: rgb(54, 47, 45);
 }  
+
+
 .article:hover .article-btn-link {
   display: block;
 }  
@@ -393,24 +596,52 @@ body {
   filter: brightness(20%);
 }  
 .article:hover .article-txt-wrapper {
-  background-color: brown;
+  background-color: rgb(54, 47, 45);
 }  
 .article:hover .article-txt-wrapper:before {
-  border-bottom: 10px solid brown;
+  border-bottom: 10px solid rgb(54, 47, 45);
 }  
 .article-photo {
   display: block;
   width: 100%;
+  height: 70%;
 }  
+.image_1 {
+  background-image: url(../img/latest_project_1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.image_2 {
+  background-image: url(../img/latest_project_2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.image_3 {
+  background-image: url(../img/latest_project_3.jpg);
+  background-size: 155%;
+}
+.image_4 {
+  background-image: url(../img/latest_project_4.jpg);
+  background-size: cover;
+}
+.image_5 {
+  background-image: url(../img/latest_project_5.jpg);
+  background-size: cover;
+}
+.image_6 {
+  background-image: url(../img/latest_project_6.jpg);
+  background-size: cover;
+}
 .article-txt-wrapper {
   width: 100%;
+  height: 30%;
   position: relative;
-  background-color: #ccc;
+  background-color: rgb(251, 250, 248);
 }  
 .article-txt-wrapper:before {
   content: "";
   border: 10px solid transparent;	
-  border-bottom: 10px solid #ccc;
+  border-bottom: 10px solid rgb(251, 250, 248);
   position: absolute;
   top: -20px;
   left: 19px;
@@ -446,51 +677,4 @@ body {
 .article-btn-search {
   background-image: url('https://static.thenounproject.com/png/101791-200.png');
   right: 35%;
-} */
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 300px;
-  padding: 10px 10px 0 10px;
-  box-sizing: border-box;
-}
-.features:after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background-color: rgb(85, 85, 85);
-}
-.features:hover .features-icon {
-  fill: rgb(199, 178, 153);
-}
-.features:hover .features-title {
-  color: rgb(199, 178, 153);
-}
-.features:hover:after {
-  background-color: rgb(199, 178, 153);
-}
-.features-icon {
-  display: block;
-  fill: rgb(85, 85, 85);
-  margin: 0 0 20px 0;
-}
-.features-title {
-  width: 100%;
-  margin: 0 0 5px 0;
-  text-align: center;
-  font-family: raleway;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  color: rgb(85, 85, 85);
-}
-.features-txt {
-  text-align: center;
-  font-family: raleway;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 24px;
-  margin: 5px 0 22px 0;
 }

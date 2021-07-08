@@ -52,7 +52,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -82,6 +81,15 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+.container-secondary {
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
 .container-secondary_inner h2 {
   font-family: raleway, Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -93,20 +101,6 @@ body {
   font-size: 12px;
   line-height: 21px;
 }
-.container-secondary {
-  width: 64%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-
-
-
-
-
 .carusel {
   background-color: rgba(17, 13, 9, 0.644);
   position: relative;
@@ -587,10 +581,10 @@ body {
   display: block;
 }  
 .article:hover .article-btn-link:hover {
-  background-color: red;
+  background-image: url('../img/link_hover.png');
 }  
 .article:hover .article-btn-search:hover {
-  background-color: red;
+  background-image: url('../img/lupa_hover.png');
 }  
 .article:hover .article-photo {
   filter: brightness(20%);
@@ -601,10 +595,12 @@ body {
 .article:hover .article-txt-wrapper:before {
   border-bottom: 10px solid rgb(54, 47, 45);
 }  
-.article-photo {
-  display: block;
+.article-photo { 
   width: 100%;
   height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }  
 .image_1 {
   background-image: url(../img/latest_project_1.jpg);
@@ -633,10 +629,24 @@ body {
   background-size: cover;
 }
 .article-txt-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
   height: 30%;
   position: relative;
   background-color: rgb(251, 250, 248);
+  justify-content: center;
+}  
+.article-title {
+  display: block;
+  padding: 10px 10px 0 10px;
+  text-align: left;
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(199, 178, 153);
+  margin-left: 10px;
 }  
 .article-txt-wrapper:before {
   content: "";
@@ -645,21 +655,21 @@ body {
   position: absolute;
   top: -20px;
   left: 19px;
-}  
-.article-title {
-  display: block;
-  text-align: center;
-  padding: 10px 10px 0 10px;
-}  
+  }  
 .article-txt {
   display: block;
-  text-align: center;
-  padding: 5px;
+  padding: 10px;
+  font-family: monserrat, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: left;
+  color: rgb(209, 209, 209);
+  margin-left: 10px;
 }  
 .article-btn-link,
 .article-btn-search {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: none;
   -webkit-background-size: cover;
   background-size: cover;
@@ -668,13 +678,13 @@ body {
   border: none;
   background-color: transparent;
   position: absolute;
-  top: 45%
+  top: 33%
 }  
 .article-btn-link {
-  background-image: url('https://image.flaticon.com/icons/png/512/34/34735.png');
-  left: 35%;
+  background-image: url('../img/link.png');
+  left: 38%;
 }  
 .article-btn-search {
-  background-image: url('https://static.thenounproject.com/png/101791-200.png');
-  right: 35%;
+  background-image: url('../img/lupa.png');
+  right: 38%;
 }

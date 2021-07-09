@@ -65,7 +65,6 @@ body {
   max-width: 84%;
   height: 100vh;
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -80,6 +79,7 @@ body {
   align-items: center;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 .container-secondary {
   width: 64%;
@@ -94,12 +94,14 @@ body {
   font-family: raleway, Arial, Helvetica, sans-serif;
   font-weight: 600;
   margin: 60px 0 0 0;
+  color: rgb(85, 85, 85);
 }
 .title_paragraph {
   font-family: montserrat, Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 12px;
-  line-height: 21px;
+  line-height: 25px;
+  color: rgb(85, 85, 85);
 }
 .carusel {
   background-color: rgba(17, 13, 9, 0.644);
@@ -119,7 +121,6 @@ body {
   margin-top: 40px;
   /* border: 1px solid #000; */
 }
-
 .logo {
   /* border: 1px solid black; */
   display: flex;
@@ -153,8 +154,6 @@ body {
 .nav-item:hover{
   color: #998675;
 }
-
-
 .carusel-header-nav-right {
     display: flex;
 }
@@ -171,7 +170,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .header-button-basket {
   border: none;
   background-color: transparent;
@@ -186,7 +184,6 @@ body {
 .header-button-basket:active svg {
   fill: #ccc;  
 }
-
 .search-icon-form {
   width: 50px;
   height: 30px;
@@ -399,10 +396,8 @@ body {
   padding: 0;
 }
 .content {
-  /* border: 1px solid rgb(11, 155, 76); */
   width: 100%;
 }
-
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -465,7 +460,6 @@ body {
   background-repeat: no-repeat;
   background-position: bottom center, bottom left, bottom right;
 }
-
 .wordpress {
   background-image: -moz-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
   background-image: -webkit-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
@@ -480,14 +474,12 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
-
 .ad-wrapper {
   width: 531px;
   margin: 0 470px 0 0;
   /* Вместо использования margin-left: 470px, можно обернуть в div элементы ad-wrapper и ad-button, задать тегу div ширину и центровку. 
   При таком подходе у блока .ad можно будет убрать justify-content: center; align-items: center; width: 100%; */
 }
-
 .ad-title {
   width: 100%;
   margin: 0;
@@ -497,11 +489,9 @@ body {
   line-height: 1.2;
   text-align: left;
 }
-
 .ad-title span {
   color: rgb(199, 178, 153);
 }
-
 .ad-txt {
   width: 100%;
   margin: 0;
@@ -511,7 +501,6 @@ body {
   line-height: 1.2;
   text-align: left;
 }
-
 .ad-button {
   width: 170px;
   min-height: 50px;
@@ -538,28 +527,29 @@ body {
 .categories-btn-link {
   width: 120px;
   padding: 10px;
+  background-color: #ffffff;
   box-sizing: border-box;
   display: flex;
-  border: none;
-  border-bottom: 3px solid #736357;
+  color: rgb(85, 85, 85);
+  border: 1px solid rgb(85, 85, 85);
   border-radius: 3px;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
-  background-color: #998675;
-  color: #fff;
   -ms-word-break: break-all;
   word-break: break-all;
-  font-family: raleway, Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: 11px;
-  margin: 35px 10px;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 35px 6px;
 }
 .categories-btn-link-txt {
   margin: auto;
 }
-
-
+.categories-btn-link:hover {
+  background-color: #998675;
+  color: #fff;
+  border: 1px solid #998675;  
+}
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -572,8 +562,6 @@ body {
   margin-bottom: 25px;
   background-color: rgb(54, 47, 45);
 }  
-
-
 .article:hover .article-btn-link {
   display: block;
 }  
@@ -687,4 +675,243 @@ body {
 .article-btn-search {
   background-image: url('../img/lupa.png');
   right: 38%;
+}
+.projects-btn-link {
+  width: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  border: none;
+  border-bottom: 3px solid #736357;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #998675;
+  color: #fff;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  margin: 35px 10px;
+}
+.projects-btn-link-txt {
+  margin: auto;
+}
+.container-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  position: relative;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;  
+}
+.video-item {
+  width: 100%;
+  height: 100%;
+}
+.video-txt-wrp {
+  width: 40%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.video-txt-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  outline: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.video-txt-title {
+  font-family: raleway, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 60px 0 0 0;
+  color: #ffffff;
+}
+.video-txt-p {
+  text-align: justify;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+}
+.video-txt-time {
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: rgb(177, 160, 141);
+}
+.video-txt-title,
+.video-txt-time {
+  display: block;
+  text-align: center;
+}
+.video-play-btn {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  outline: none;
+}
+.video-play-btn-icon {
+  margin: auto;
+  fill: #fff;
+}
+.video-play-btn:hover .video-play-btn-icon {
+  fill: coral;
+}
+.video-play-btn:active .video-play-btn-icon {
+  fill: bisque;
+}
+
+.excellent {
+  position: relative;
+  
+}
+
+.excel-img {
+  width: 100%;
+  margin-top: 80px;
+  position: relative;
+  left: -70%;
+  /* visibility: hidden; */
+
+}
+.excellent-text {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.excellent-text-wrpr {
+  display: flex;
+  flex-wrap: wrap;
+  width: 43%;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 47%; 
+  
+}
+.excellent-title {
+  text-align: left;
+  width: 100%;
+}
+.excellent-paragraph {
+  text-align: left;
+  margin-top: 30px;
+}
+.excellent-ul {
+  text-align: left;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 32px;
+  color: rgb(85, 85, 85);
+  list-style-type: none;
+  margin-left: 40px;
+
+}
+
+.excellent-ul li {
+ position: relative;
+}
+
+
+.excellent-ul li:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(177, 160, 141);
+  background-image: url(../img/mark.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  line-height: 15px;
+  color: #fff;
+  position: absolute;
+  left: -40px;
+  bottom: 10px;
+  margin: 0 auto;
+}
+.numbers {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: -moz-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+}
+.numbers-ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  box-sizing: border-box;
+}
+.numbers-ad-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 250px;
+  }
+.numbers-ad-title {
+  width: 100%;
+  margin: 0;
+  font-size: 41px;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+}
+.numbers-ad-title span {
+  color: #ffffff;
+  margin: 0;
+
+}
+.numbers-ad-txt {
+  width: 100%;
+  margin: 16px 0 25px 0;
+  font-size: 14px;
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: #e4c9b2;
+  line-height: 1.2;
+  text-align: center;
+}
+.numbers-svg {
+  fill: #e4c9b2;
+  margin-bottom: 20px;
+}
+.numbers-ad-wrapper:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
 }

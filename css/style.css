@@ -99,10 +99,10 @@ body {
 }
 .title_paragraph {
   font-family: montserrat, Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 25px;
-  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 27px;
+  color: rgb(141, 141, 141);
 }
 .carusel {
   background-color: rgba(17, 13, 9, 0.644);
@@ -110,7 +110,7 @@ body {
   background-image: url(../img/slide_head.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   background-blend-mode: darken;
 }
 .carusel-header-nav {
@@ -535,7 +535,7 @@ body {
   box-sizing: border-box;
   display: flex;
   color: rgb(85, 85, 85);
-  border: 1px solid rgb(85, 85, 85);
+  border: 1px solid rgb(173, 173, 173);
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
@@ -1248,10 +1248,18 @@ align-items: center;
   border-left: 6px solid #ffffff;
   position: absolute;
   left: 86px;
-  bottom: 8px;
+  bottom: 9px;
 }
-.footer-item-socialBlog {
-
+.footer-item1-readmore:hover {
+  color: #c7b299;
+}
+.footer-item1-readmore:hover:after {
+  content: "";
+  border: 6px solid transparent;	
+  position: absolute;
+  left: 86px;
+  bottom: 9px; 
+  border-left: 6px solid #c7b299;
 }
 .title-txt {
   width: 100%;
@@ -1354,17 +1362,7 @@ width: 100%;
   .footer-item-article:hover .footer-item-article-date {
     color: #ffffff;
   }
-.footer-item1-readmore:hover {
-  color: #c7b299;
-}
-.footer-item1-readmore:hover .footer-item1-readmore:after{
-  content: "";
-  border: 6px solid transparent;	
-  position: absolute;
-  left: 86px;
-  bottom: 8px; 
-  border-left: 6px solid #c7b299;
-}
+
 .footer-widget:hover {
 filter: brightness(60%);}
 .copyright {
@@ -1376,13 +1374,44 @@ filter: brightness(60%);}
 .container-flex {
   display: flex;
   flex-wrap: nowrap;
-  width: 1180px;
+  width: 64%;
   margin: 0 auto;
-  font-family: Arial;
-  font-weight: normal;
   justify-content: space-between;
   align-items: center;
 } 
-.container-flex div {
+.copyright-block {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.copy-link {
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 12px;
+  position: relative;
+}
+.copy-link:not(:last-child):after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: rgb(85, 85, 85);;
+  right: 0px;
+  bottom: 28px;
+}
+.copyright-block a {
+  text-decoration: none;
   color: rgb(85, 85, 85);
 }
+.copylogo {
+  font-family: Raleway;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+}
+.copyright-block-item:hover {
+  color: #c7b299;
+}
+
